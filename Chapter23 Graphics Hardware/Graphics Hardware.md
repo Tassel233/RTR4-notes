@@ -40,7 +40,7 @@ where $w_{\text{max}}$ is the maximum number of warps allowed on an MP, and $w_{
 
 
 
-## Data-Parallet Architectures
+## Data-Parallel Architectures
 
 
 
@@ -69,7 +69,7 @@ where $w_{\text{max}}$ is the maximum number of warps allowed on an MP, and $w_{
 
 
 
-## Buses && Video memories
+## Buses & Video memories
 
 * Access to video memory is usually much faster than to system memory over a bus
 * Traditionally, textures and render targets are stored in video memory; *Static* vertex and index buffers which remain unchanged can also be placed in video memory
@@ -78,7 +78,7 @@ where $w_{\text{max}}$ is the maximum number of warps allowed on an MP, and $w_{
 
 
 
-## Caching && Compression
+## Caching & Compression
 
 * Most buffers and texture formats are stored in tiled formats
 * compressor and decompressor are to be used losslessly
