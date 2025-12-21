@@ -48,7 +48,7 @@ After vertex processing, optional stages can take place in this order: **tessell
 
 **Geometry Shading**: This stage produces new vertices. It is a much simpler stage as the creation is limited in scope and the types of output primitives are much more limited. One of the most popular is **particle generation**.
 
-**Stream Output**: Instead of sending our processed vertices down the rest of the pipeline to be rendered to the screen, at this point we can optionally output these to an array for further processing. This stage is typically used for **particle simulations**.
+**Stream Output**: Instea d of sending our processed vertices down the rest of the pipeline to be rendered to the screen, at this point we can optionally output these to an array for further processing. This stage is typically used for **particle simulations**.
 
 
 
@@ -70,25 +70,39 @@ After clipping, **perspective division** is performed to place positions into th
 
 
 
-
+![image-20251219180418108](assets/image-20251219180418108.png)
 
 # Rasterization
 
 
 
+## Triangle Setup
+
+The differentials, edge equations, and other data for the triangle are computed.
 
 
 
+## Triangle Traversal
 
-
-
-
-
-
+Find which samples or pixels are inside a triangle and generate fragments. Each triangle fragment’s properties are generated using data interpolated among the three triangle vertices. It is also here that **perspective-correct interpolation** over the triangles is performed
 
 # Pixel Processing
 
+Pixel processing is the stage where per-pixel or per-sample computations and operations are performed on pixels or samples that are inside a primitive.
 
+
+
+## Pixel Shading
+
+Any per-pixel shading computations are performed here, using the **interpolated shading data** as input.
+
+
+
+## Merging
+
+It is the responsibility of the merging stage to combine the fragment color produced by the pixel shading stage with the color currently stored in the buffer, a.k.a blending.
+
+Blending is typically configurable using the API and not fully programmable.
 
 
 
