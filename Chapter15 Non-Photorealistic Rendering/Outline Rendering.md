@@ -16,5 +16,29 @@ Contour edges should not be confused with contour lines used on topographical ma
 
 
 
+## Shading Normal Contour Edges
+
+
+
+The dot product between the **shading normal** and the **direction to the eye** can be used to give a contour edge. If this value is near zero, then the surface is nearly edge-on to the eye and so is likely to be near a contour edge. Color such areas black, falling off to white as the dot product increases.
+
+
+
+
+
+<img src="assets/image-20260211101218761.png" alt="image-20260211101218761" style="zoom: 50%;" />
+
+
+
+**Drawbacks**
+
+* Contour lines are drawn with variable width, depending on the curvature of the surface.
+* Only work for curved surfaces without crease edges.
+* ...
+
+
+
+
+
 
 
