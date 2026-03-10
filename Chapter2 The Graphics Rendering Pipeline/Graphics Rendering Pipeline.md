@@ -48,7 +48,7 @@ After vertex processing, optional stages can take place in this order: **tessell
 
 **Geometry Shading**: This stage produces new vertices. It is a much simpler stage as the creation is limited in scope and the types of output primitives are much more limited. One of the most popular is **particle generation**.
 
-**Stream Output**: Instea d of sending our processed vertices down the rest of the pipeline to be rendered to the screen, at this point we can optionally output these to an array for further processing. This stage is typically used for **particle simulations**.
+**Stream Output**: Instead of sending our processed vertices down the rest of the pipeline to be rendered to the screen, at this point we can optionally output these to an array for further processing. This stage is typically used for **particle simulations**.
 
 
 
