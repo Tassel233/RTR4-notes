@@ -1,6 +1,6 @@
 Introduce *Gooch shading model*, a non-photorealistic model to increase legibility of details in technical illustrations.
 
-<img src="assets/image-20260309140107773.png" alt="image-20260309140107773" style="zoom: 67%;" />
+<img src="assets/image-20260309140107773.png" alt="image-20260309140107773" style="zoom: 50%;" />
 
 The result is affected by several factors:
 
