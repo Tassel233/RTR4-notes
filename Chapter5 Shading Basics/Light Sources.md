@@ -17,17 +17,17 @@ A punctual light is not one that is on time for its appointments, but rather a l
 
 Point lights(omni light) uniformly emit light in all directions, while $c_{light}$ varies as a function of the distance $r$.
 
-<img src="D:\notes\RTR4\RTR4-notes\Chapter5 Shading Basics\assets\image-20260324213533989.png" alt="image-20260324213533989" style="zoom:67%;" />
+<img src="assets/image-20260324214519047.png" alt="image-20260324214519047" style="zoom:67%;" />
 
 We can infer that
 
-<img src="D:\notes\RTR4\RTR4-notes\Chapter5 Shading Basics\assets\image-20260324213552109.png" alt="image-20260324213552109" style="zoom:67%;" />
+<img src="assets/image-20260324214532561.png" alt="image-20260324214532561" style="zoom:67%;" />
 
 Although technically the correct distance attenuation for a point light, there are some issues that make this equation less than ideal for practical shading use.
 
 1. As the value of $r$ tends to 0, the value of $c_{light}$ appears to be infinite. To address this, a small modification $\epsilon$ can be added to the denominator( The Unreal game engines uses $\epsilon$ = 1 cm ).
 
-   <img src="D:\notes\RTR4\RTR4-notes\Chapter5 Shading Basics\assets\image-20260324213607027.png" alt="image-20260324213607027" style="zoom:67%;" />
+   <img src="assets/image-20260324214547161.png" alt="image-20260324214547161" style="zoom:67%;" />
 
    Alternatively, we can clamp $r$ to a minimum value $r_{min}$.
 
@@ -41,11 +41,11 @@ Although technically the correct distance attenuation for a point light, there a
 
    One such function is like this:
 
-   <img src="C:\Users\jinkail\AppData\Roaming\Typora\typora-user-images\image-20260324211937860.png" alt="image-20260324211937860" style="zoom:67%;" />
+   <img src="assets/image-20260324214559583.png" alt="image-20260324214559583" style="zoom:67%;" />
 
    (The +2 means to clamp the value, if negative, to 0 before squaring it.)
 
-   <img src="D:\notes\RTR4\RTR4-notes\Chapter5 Shading Basics\assets\image-20260324213638949.png" alt="image-20260324213638949" style="zoom:50%;" />
+   <img src="assets/image-20260324214612900.png" alt="image-20260324214612900" style="zoom:50%;" />
 
    In fact, the choice of falloff function may be driven by creative considerations. 
 
