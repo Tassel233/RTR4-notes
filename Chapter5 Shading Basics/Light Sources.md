@@ -55,7 +55,22 @@ Although technically the correct distance attenuation for a point light, there a
 
 ### Spot Lights
 
+In real world, illumination from light sources varies by **direction**($f_{\text{dir}}(\mathbf{l})$) as well as **distance**
 
+Spotlight projects light in a circular cone.
+
+* directional falloff has rotational symmetry around the spotlight direction vector **l**
+
+
+
+<img src="assets/image-20260326155502650.png" alt="image-20260326155502650" style="zoom:67%;" />
+
+* *penumbra angle* $\theta_{p}$ defines an inner cone where the light is at its full intensity.
+* *umbra angle* $\theta_{u}$ defines $f_{\text{dir}}(\mathbf{l}) = 0 \text{ for all } \theta_s \ge \theta_u$
+
+Falloff functions  used for spotlights tend to be roughly similar.
+
+<img src="assets/image-20260326203611682.png" alt="image-20260326203611682" style="zoom:67%;" />
 
 
 
