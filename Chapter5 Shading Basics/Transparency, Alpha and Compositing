@@ -1,0 +1,5 @@
+## 
+
+It is common to use **over** operator, as follows:	$$c_o = \alpha_s \mathbf{c}_s + (1 - \alpha_s) \mathbf{c}_d$$
+
+To render transparent objects properly, we need to render all opaque objects first with blending off, then rendering the transparent objects with **over** turned on.
